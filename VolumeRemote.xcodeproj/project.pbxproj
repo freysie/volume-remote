@@ -1,0 +1,544 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3B1D1F5F28AC525F00BC2436 /* DeviceIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1D1F5E28AC525F00BC2436 /* DeviceIcon.swift */; };
+		3B1D1F6028AC525F00BC2436 /* DeviceIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1D1F5E28AC525F00BC2436 /* DeviceIcon.swift */; };
+		3B1D1F6228AC52E000BC2436 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1D1F6128AC528F00BC2436 /* Network.swift */; };
+		3B1D1F6328AC52E100BC2436 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1D1F6128AC528F00BC2436 /* Network.swift */; };
+		3B1D1F6528AC52F800BC2436 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1D1F6428AC52F700BC2436 /* SettingsView.swift */; };
+		3B1D1F6728AC531B00BC2436 /* Bezel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1D1F6628AC531B00BC2436 /* Bezel.swift */; };
+		3B5B573528AB0BEE004BB199 /* VolumeRemoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B572528AB0BE6004BB199 /* VolumeRemoteApp.swift */; };
+		3B5B573628AB0BEE004BB199 /* VolumeRemoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B572528AB0BE6004BB199 /* VolumeRemoteApp.swift */; };
+		3B5B573728AB0BEE004BB199 /* RemoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B572628AB0BE7004BB199 /* RemoteView.swift */; };
+		3B5B573928AB0BEE004BB199 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B5B572728AB0BEE004BB199 /* Assets.xcassets */; };
+		3B5B573A28AB0BEE004BB199 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B5B572728AB0BEE004BB199 /* Assets.xcassets */; };
+		3B5B574528AB0D73004BB199 /* ISSoundAdditions in Frameworks */ = {isa = PBXBuildFile; productRef = 3B5B574428AB0D73004BB199 /* ISSoundAdditions */; };
+		3B5B574828AC2125004BB199 /* DevicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B574728AC2108004BB199 /* DevicesView.swift */; };
+		3B8F249A28AD2D7D00A5D237 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8F249928AD2D4A00A5D237 /* Sound.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3B120C9B28AD7FD200C9B056 /* Slider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Slider.png; sourceTree = "<group>"; };
+		3B120C9C28AD7FD200C9B056 /* Devices.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Devices.png; sourceTree = "<group>"; };
+		3B120C9D28AD7FD200C9B056 /* Buttons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Buttons.png; sourceTree = "<group>"; };
+		3B120C9E28AD7FD500C9B056 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3B1D1F5E28AC525F00BC2436 /* DeviceIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceIcon.swift; sourceTree = "<group>"; };
+		3B1D1F6128AC528F00BC2436 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		3B1D1F6428AC52F700BC2436 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		3B1D1F6628AC531B00BC2436 /* Bezel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bezel.swift; sourceTree = "<group>"; };
+		3B5B572528AB0BE6004BB199 /* VolumeRemoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeRemoteApp.swift; sourceTree = "<group>"; };
+		3B5B572628AB0BE7004BB199 /* RemoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteView.swift; sourceTree = "<group>"; };
+		3B5B572728AB0BEE004BB199 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3B5B572C28AB0BEE004BB199 /* Volume Remote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Volume Remote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B5B573228AB0BEE004BB199 /* Volume Remote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Volume Remote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B5B573428AB0BEE004BB199 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		3B5B574728AC2108004BB199 /* DevicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesView.swift; sourceTree = "<group>"; };
+		3B8F249928AD2D4A00A5D237 /* Sound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
+		3BC697A028AD3C0100410413 /* VolumeRemote--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "VolumeRemote--iOS--Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3B5B572928AB0BEE004BB199 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B5B572F28AB0BEE004BB199 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B5B574528AB0D73004BB199 /* ISSoundAdditions in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3B120C9A28AD7FD100C9B056 /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				3B120C9B28AD7FD200C9B056 /* Slider.png */,
+				3B120C9C28AD7FD200C9B056 /* Devices.png */,
+				3B120C9D28AD7FD200C9B056 /* Buttons.png */,
+			);
+			path = Screenshots;
+			sourceTree = "<group>";
+		};
+		3B5B571F28AB0BE5004BB199 = {
+			isa = PBXGroup;
+			children = (
+				3B120C9E28AD7FD500C9B056 /* README.md */,
+				3B120C9A28AD7FD100C9B056 /* Screenshots */,
+				3BC697A028AD3C0100410413 /* VolumeRemote--iOS--Info.plist */,
+				3B5B574628AC2100004BB199 /* iOS */,
+				3B5B572428AB0BE6004BB199 /* Shared */,
+				3B5B573328AB0BEE004BB199 /* macOS */,
+				3B5B572D28AB0BEE004BB199 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3B5B572428AB0BE6004BB199 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				3B1D1F5E28AC525F00BC2436 /* DeviceIcon.swift */,
+				3B1D1F6128AC528F00BC2436 /* Network.swift */,
+				3B5B572528AB0BE6004BB199 /* VolumeRemoteApp.swift */,
+				3B5B572728AB0BEE004BB199 /* Assets.xcassets */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		3B5B572D28AB0BEE004BB199 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3B5B572C28AB0BEE004BB199 /* Volume Remote.app */,
+				3B5B573228AB0BEE004BB199 /* Volume Remote.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3B5B573328AB0BEE004BB199 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				3B5B573428AB0BEE004BB199 /* macOS.entitlements */,
+				3B8F249928AD2D4A00A5D237 /* Sound.swift */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		3B5B574628AC2100004BB199 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3B1D1F6628AC531B00BC2436 /* Bezel.swift */,
+				3B5B574728AC2108004BB199 /* DevicesView.swift */,
+				3B5B572628AB0BE7004BB199 /* RemoteView.swift */,
+				3B1D1F6428AC52F700BC2436 /* SettingsView.swift */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3B5B572B28AB0BEE004BB199 /* VolumeRemote (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B5B573D28AB0BEE004BB199 /* Build configuration list for PBXNativeTarget "VolumeRemote (iOS)" */;
+			buildPhases = (
+				3B5B572828AB0BEE004BB199 /* Sources */,
+				3B5B572928AB0BEE004BB199 /* Frameworks */,
+				3B5B572A28AB0BEE004BB199 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "VolumeRemote (iOS)";
+			productName = "VolumeRemote (iOS)";
+			productReference = 3B5B572C28AB0BEE004BB199 /* Volume Remote.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3B5B573128AB0BEE004BB199 /* VolumeRemote (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B5B574028AB0BEE004BB199 /* Build configuration list for PBXNativeTarget "VolumeRemote (macOS)" */;
+			buildPhases = (
+				3B5B572E28AB0BEE004BB199 /* Sources */,
+				3B5B572F28AB0BEE004BB199 /* Frameworks */,
+				3B5B573028AB0BEE004BB199 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "VolumeRemote (macOS)";
+			packageProductDependencies = (
+				3B5B574428AB0D73004BB199 /* ISSoundAdditions */,
+			);
+			productName = "VolumeRemote (macOS)";
+			productReference = 3B5B573228AB0BEE004BB199 /* Volume Remote.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3B5B572028AB0BE5004BB199 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					3B5B572B28AB0BEE004BB199 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					3B5B573128AB0BEE004BB199 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 3B5B572328AB0BE5004BB199 /* Build configuration list for PBXProject "VolumeRemote" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3B5B571F28AB0BE5004BB199;
+			packageReferences = (
+				3B5B574328AB0D73004BB199 /* XCRemoteSwiftPackageReference "ISSoundAdditions" */,
+			);
+			productRefGroup = 3B5B572D28AB0BEE004BB199 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3B5B572B28AB0BEE004BB199 /* VolumeRemote (iOS) */,
+				3B5B573128AB0BEE004BB199 /* VolumeRemote (macOS) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3B5B572A28AB0BEE004BB199 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B5B573928AB0BEE004BB199 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B5B573028AB0BEE004BB199 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B5B573A28AB0BEE004BB199 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3B5B572828AB0BEE004BB199 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B1D1F6528AC52F800BC2436 /* SettingsView.swift in Sources */,
+				3B1D1F6228AC52E000BC2436 /* Network.swift in Sources */,
+				3B5B574828AC2125004BB199 /* DevicesView.swift in Sources */,
+				3B5B573728AB0BEE004BB199 /* RemoteView.swift in Sources */,
+				3B1D1F6728AC531B00BC2436 /* Bezel.swift in Sources */,
+				3B1D1F5F28AC525F00BC2436 /* DeviceIcon.swift in Sources */,
+				3B5B573528AB0BEE004BB199 /* VolumeRemoteApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B5B572E28AB0BEE004BB199 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B1D1F6028AC525F00BC2436 /* DeviceIcon.swift in Sources */,
+				3B5B573628AB0BEE004BB199 /* VolumeRemoteApp.swift in Sources */,
+				3B1D1F6328AC52E100BC2436 /* Network.swift in Sources */,
+				3B8F249A28AD2D7D00A5D237 /* Sound.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3B5B573B28AB0BEE004BB199 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_MODULE_NAME = VolumeRemote;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3B5B573C28AB0BEE004BB199 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_MODULE_NAME = VolumeRemote;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		3B5B573E28AB0BEE004BB199 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X2LBZ44QGD;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "VolumeRemote--iOS--Info.plist";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Volume Remote uses the local network to control volume across devices.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = local.VolumeRemote;
+				PRODUCT_NAME = "Volume Remote";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3B5B573F28AB0BEE004BB199 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X2LBZ44QGD;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "VolumeRemote--iOS--Info.plist";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Volume Remote uses the local network to control volume across devices.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = local.VolumeRemote;
+				PRODUCT_NAME = "Volume Remote";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3B5B574128AB0BEE004BB199 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Volume Remote uses the local network to control volume across devices.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = local.VolumeRemote;
+				PRODUCT_NAME = "Volume Remote";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		3B5B574228AB0BEE004BB199 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Volume Remote uses the local network to control volume across devices.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = local.VolumeRemote;
+				PRODUCT_NAME = "Volume Remote";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3B5B572328AB0BE5004BB199 /* Build configuration list for PBXProject "VolumeRemote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B5B573B28AB0BEE004BB199 /* Debug */,
+				3B5B573C28AB0BEE004BB199 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B5B573D28AB0BEE004BB199 /* Build configuration list for PBXNativeTarget "VolumeRemote (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B5B573E28AB0BEE004BB199 /* Debug */,
+				3B5B573F28AB0BEE004BB199 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B5B574028AB0BEE004BB199 /* Build configuration list for PBXNativeTarget "VolumeRemote (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B5B574128AB0BEE004BB199 /* Debug */,
+				3B5B574228AB0BEE004BB199 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3B5B574328AB0D73004BB199 /* XCRemoteSwiftPackageReference "ISSoundAdditions" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/InerziaSoft/ISSoundAdditions";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3B5B574428AB0D73004BB199 /* ISSoundAdditions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B5B574328AB0D73004BB199 /* XCRemoteSwiftPackageReference "ISSoundAdditions" */;
+			productName = ISSoundAdditions;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 3B5B572028AB0BE5004BB199 /* Project object */;
+}

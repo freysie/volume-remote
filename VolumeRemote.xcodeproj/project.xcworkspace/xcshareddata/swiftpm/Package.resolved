@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "issoundadditions",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/InerziaSoft/ISSoundAdditions",
+      "state" : {
+        "revision" : "6c1475f9aff503ef0e6a2e54670efa2f998b15b1",
+        "version" : "2.0.0"
+      }
+    }
+  ],
+  "version" : 2
+}
