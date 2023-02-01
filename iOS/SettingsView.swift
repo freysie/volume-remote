@@ -2,12 +2,12 @@ import SwiftUI
 
 struct SettingsView: View {
   @EnvironmentObject var settings: AppSettings
-  // @State var stayConnected = false
 
   var body: some View {
     Form {
       Toggle("Fade Bezel", isOn: settings.$fadesBezel)
       Toggle("Show Mute Button", isOn: settings.$showsMuteButton)
+      Toggle("Play Feedback", isOn: settings.$playsFeedback)
 
       Picker("Control Using", selection: settings.$controls.animation()) {
         Text("Slider").tag(Controls.slider)
@@ -20,7 +20,7 @@ struct SettingsView: View {
       }
 
       // Section {
-      //   Toggle("Stay Connected", isOn: $stayConnected)
+      //   Toggle("Stay Connected", isOn: settings.$staysConnected)
       // } footer: {
       //   Text("Staying connected speeds up wake time, but may decrease battery life.")
       // }

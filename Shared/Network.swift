@@ -2,7 +2,7 @@ import SwiftUI
 import Network
 import MultipeerConnectivity
 #if os(macOS)
-@testable import ISSoundAdditions
+import ISSoundAdditions
 #endif
 
 struct RemoteDevice: Identifiable {
@@ -28,11 +28,15 @@ enum PeerCommand: Codable {
   case state(volume: Float, isMuted: Bool)
   case toggleMute
   case decreaseVolume
-  case inceaseVolume
+  case increaseVolume
   case setVolume(Double)
+
+  case decreaseBrightness
+  case increaseBrightness
+  case setBrightness(Double)
 }
 
-class Network: NSObject, MCSessionDelegate, MCNearbyServiceBrowserDelegate, MCNearbyServiceAdvertiserDelegate, MCAdvertiserAssistantDelegate, ObservableObject {
+class Network: NSObject, ObservableObject, MCSessionDelegate, MCNearbyServiceBrowserDelegate, MCNearbyServiceAdvertiserDelegate, MCAdvertiserAssistantDelegate {
   static let service = "fa-volremote"
   
   static var currentDeviceName: String {
@@ -49,7 +53,7 @@ class Network: NSObject, MCSessionDelegate, MCNearbyServiceBrowserDelegate, MCNe
   @Published private(set) var devices = [MCPeerID: RemoteDevice]()
   
   private let monitor = NWPathMonitor()
-  private let monitorQueue = DispatchQueue(label: "Monitor")
+  private let monitorQueue = DispatchQueue(label: "local.VolumeRemote.network-path-monitor")
   private let peer = MCPeerID(displayName: Network.currentDeviceName)
   private var session: MCSession!
 #if os(iOS)
@@ -121,7 +125,7 @@ class Network: NSObject, MCSessionDelegate, MCNearbyServiceBrowserDelegate, MCNe
     print((#function, error))
   }
   
-  @MainActor func browser(_ browser: MCNearbyServiceBrowser, foundPeer peerID: MCPeerID, withDiscoveryInfo info: [String : String]?) {
+  @MainActor func browser(_ browser: MCNearbyServiceBrowser, foundPeer peerID: MCPeerID, withDiscoveryInfo info: [String: String]?) {
     devices[peerID] = RemoteDevice(peerID)
   }
   
@@ -179,7 +183,7 @@ class Network: NSObject, MCSessionDelegate, MCNearbyServiceBrowserDelegate, MCNe
       case .toggleMute:
         Sound.output.isMuted.toggle()
         break
-      case .inceaseVolume:
+      case .increaseVolume:
         Sound.output.increaseVolume(by: 1/16)
         break
       case .decreaseVolume:
