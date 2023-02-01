@@ -1,27 +1,68 @@
 import SwiftUI
+import AudioToolbox
 
 struct RemoteView: View {
   var device: RemoteDevice
 
   @State var sliderValue = 0.5
+  @State var bezelIsVisible = true
+  @State var bezelTimer: Timer?
   @State var settingsArePresented = false
+  @State var feedbackSoundID = SystemSoundID(0)
   @Environment(\.dismiss) var dismiss
   @EnvironmentObject var settings: AppSettings
   @EnvironmentObject var network: Network
+
+  func set(_ value: Double) {
+    network.send(.setBrightness(Float(value)), to: [device])
+    playFeedbackSoundIfNeeded()
+    showBezelIfNeeded()
+  }
+
+  func decrease() {
+    network.send(.decreaseBrightness, to: [device])
+    playFeedbackSoundIfNeeded()
+    showBezelIfNeeded()
+  }
   
-//  var sliderValue: Binding<Double> {
-//    Binding {
-//      device.volume
-//    } set: { newValue, transaction in
-//      network.send(.setVolume(newValue), to: [device])
-//    }
-//  }
+  func increase() {
+    network.send(.increaseBrightness, to: [device])
+    playFeedbackSoundIfNeeded()
+    showBezelIfNeeded()
+  }
+  
+  func playFeedbackSoundIfNeeded() {
+    guard settings.playsFeedback else { return }
+    if feedbackSoundID == 0, let url = Bundle.main.url(forResource: "volume", withExtension: "aiff") {
+      AudioServicesCreateSystemSoundID(url as CFURL, &feedbackSoundID)
+    }
+    AudioServicesPlaySystemSound(feedbackSoundID)
+  }
+  
+  func showBezelIfNeeded() {
+    guard settings.fadesBezel else { return }
+    bezelIsVisible = true
+  }
+  
+  func hideBezelIfNeeded() {
+    guard settings.fadesBezel else { return }
+    bezelTimer?.invalidate()
+    bezelTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { _ in
+      bezelIsVisible = false
+    }
+  }
   
   var body: some View {
     VStack(spacing: 50) {
       Spacer()
       
-      Bezel(value: device.isMuted ? 0 : device.volume)
+      Bezel(value: device.brightness)
+        .opacity(bezelIsVisible || !settings.fadesBezel ? 1 : 0)
+        .animation(Animation.easeOut(duration: bezelIsVisible ? 0 : 0.75), value: bezelIsVisible)
+        .onAppear { hideBezelIfNeeded() }
+        .onChange(of: bezelIsVisible) { isVisible in
+          if isVisible { hideBezelIfNeeded() }
+        }
       
       switch settings.controls {
       case .slider:
@@ -29,7 +70,7 @@ struct RemoteView: View {
           Group {
             if settings.usesSliderSteps {
               Slider(value: $sliderValue, in: 0.0...1.0, step: 1/16) {
-                Text("Volume")
+                Text("Brightness")
               } minimumValueLabel: {
                 Image(systemName: "speaker")
               } maximumValueLabel: {
@@ -37,51 +78,33 @@ struct RemoteView: View {
               }
             } else {
               Slider(value: $sliderValue) {
-                Text("Volume")
+                Text("Brightess")
               } minimumValueLabel: {
                 Image(systemName: "speaker")
               } maximumValueLabel: {
                 Image(systemName: "speaker.wave.3")
-              } onEditingChanged: { wut in
-                print(wut)
-                network.send(.setVolume(sliderValue), to: [device])
+              } onEditingChanged: { _ in
+                // print(_)
+                set(sliderValue)
               }
             }
           }
-          .onChange(of: device.volume) {
-            sliderValue = $0
-          }
-          
-          if settings.showsMuteButton {
-            Button(action: { network.send(.toggleMute, to: [device]) }) {
-              Image(systemName: "speaker.slash")
-                .frame(maxWidth: .infinity)
-                .frame(height: 48)
-            }
-            .font(.system(size: 24))
-            .buttonStyle(.bordered)
+          .onChange(of: device.brightness) {
+            sliderValue = Double($0)
           }
         }
         .padding(30)
         
       case .buttons:
         HStack {
-          if settings.showsMuteButton {
-            Button(action: { network.send(.toggleMute, to: [device]) }) {
-              Image(systemName: "speaker")
-                .frame(maxWidth: .infinity)
-                .frame(height: 48)
-            }
-          }
-          
-          Button(action: { network.send(.decreaseVolume, to: [device]) }) {
-            Image(systemName: "speaker.wave.1")
+          Button(action: decrease) {
+            Image(systemName: "sun.min")
               .frame(maxWidth: .infinity)
               .frame(height: 48)
           }
           
-          Button(action: { network.send(.inceaseVolume, to: [device]) }) {
-            Image(systemName: "speaker.wave.3")
+          Button(action: increase) {
+            Image(systemName: "sun.max")
               .frame(maxWidth: .infinity)
               .frame(height: 48)
           }
@@ -123,10 +146,7 @@ struct RemoteView: View {
           }
       }
     }
-//    .onChange(of: device) {
-//      value = device?.volume
-//      isMuted = device?.isMuted
-//    }
+    .onChange(of: device.brightness) { _ in showBezelIfNeeded() }
   }
 }
 

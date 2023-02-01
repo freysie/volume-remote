@@ -1,5 +1,11 @@
 import SwiftUI
 
+#if os(iOS)
+let screenScale = UIScreen.main.scale
+#elseif os(macOS)
+let screenScale = NSScreen.main?.backingScaleFactor ?? 1
+#endif
+
 struct DeviceIcon: View {
   var disabled = false
 
@@ -17,7 +23,7 @@ struct DeviceIcon: View {
       endPoint: .trailing
     )
     .mask {
-      Image(systemName: "speaker.wave.3.fill")
+      Image(systemName: "sun.max")
         .font(.system(size: 48).bold())
     }
     .background {
@@ -32,10 +38,10 @@ struct DeviceIcon: View {
         Color.black.opacity(0.3)
       }
       .mask {
-        Image(systemName: "speaker.wave.3.fill")
+        Image(systemName: "sun.max")
           .font(.system(size: 48).bold())
       }
-      .offset(x: 0, y: -1)
+      .offset(x: 0, y: -1 / screenScale)
     }
     .background {
       LinearGradient(
@@ -65,6 +71,7 @@ struct DeviceIcon: View {
     .clipped()
     .shadow(color: Color(white: 0.96), radius: 2)
     .frame(width: 118, height: 118)
+    // .drawingGroup()
   }
 }
 
@@ -72,8 +79,8 @@ struct DeviceIcon_Previews: PreviewProvider {
   static var previews: some View {
     DeviceIcon()
       .padding()
-      .previewDisplayName("Default")
       .previewLayout(.sizeThatFits)
+      .previewDisplayName("Default")
     
     DeviceIcon(disabled: true)
       .padding()

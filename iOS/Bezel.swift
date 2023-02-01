@@ -1,28 +1,29 @@
 import SwiftUI
 
 struct Bezel: View {
-  var value: Double
+  var value: Float
   
   var body: some View {
     VStack(alignment: .center) {
       Spacer()
       
-//      Image(systemName: "sun.max")
-//        .font(.system(size: 112))
-//        .foregroundStyle(.secondary)
-      
-      Image(systemName: value > 0 ? "speaker.wave.3" : "speaker.slash")
-        .font(.system(size: 88))
-        .symbolVariant(.fill)
+      Image(systemName: "sun.max")
+        .font(.system(size: 112))
         .foregroundStyle(.secondary)
+      
+      // Image(systemName: value > 0 ? "speaker.wave.3" : "speaker.slash")
+      //   .font(.system(size: 88))
+      //   .symbolVariant(.fill)
+      //   .foregroundStyle(.secondary)
       
       Spacer()
       
+      // TODO: add quarters
       HStack(spacing: 1) {
         ForEach(0..<16) { i in
           // HStack(spacing: 0) {}
           Rectangle()
-            .fill(Double(i) < (16 * value) ? AnyShapeStyle(.secondary) : AnyShapeStyle(.clear))
+            .fill(Float(i) < (16 * value) ? AnyShapeStyle(.secondary) : AnyShapeStyle(.clear))
             .frame(width: 12, height: 8)
         }
       }
@@ -48,7 +49,10 @@ struct Bezel_Previews: PreviewProvider {
     Group {
       Bezel(value: 0)
         .previewDisplayName("0%")
-      
+
+      Bezel(value: (1 / 16 / 4) * 3)
+        .previewDisplayName("four quarter 16th")
+
       Bezel(value: 0.42)
         .previewDisplayName("42%")
       

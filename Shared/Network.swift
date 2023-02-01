@@ -12,6 +12,7 @@ struct RemoteDevice: Identifiable {
   var isConnected = false
   var volume = 0.0
   var isMuted = false
+  var brightness: Float = -1
   
   init(_ name: String) {
     peer = nil
@@ -28,8 +29,13 @@ enum PeerCommand: Codable {
   case state(volume: Float, isMuted: Bool)
   case toggleMute
   case decreaseVolume
-  case inceaseVolume
+  case increaseVolume
   case setVolume(Double)
+
+  case brightness(Float)
+  case setBrightness(Float)
+  case decreaseBrightness
+  case increaseBrightness
 }
 
 class Network: NSObject, MCSessionDelegate, MCNearbyServiceBrowserDelegate, MCNearbyServiceAdvertiserDelegate, MCAdvertiserAssistantDelegate, ObservableObject {
@@ -49,7 +55,7 @@ class Network: NSObject, MCSessionDelegate, MCNearbyServiceBrowserDelegate, MCNe
   @Published private(set) var devices = [MCPeerID: RemoteDevice]()
   
   private let monitor = NWPathMonitor()
-  private let monitorQueue = DispatchQueue(label: "Monitor")
+  private let monitorQueue = DispatchQueue(label: "local.VolumeRemote.network-path-monitor")
   private let peer = MCPeerID(displayName: Network.currentDeviceName)
   private var session: MCSession!
 #if os(iOS)
@@ -95,6 +101,15 @@ class Network: NSObject, MCSessionDelegate, MCNearbyServiceBrowserDelegate, MCNe
     try! Sound.output.addMuteObserver { newValue in
       self.send(.state(volume: Sound.output.volume, isMuted: newValue), to: Array(self.devices.values))
     }
+
+    let observer = Unmanaged.passUnretained(self).toOpaque()
+    DisplayServicesRegisterForBrightnessChangeNotifications(CGMainDisplayID(), observer) { _, observer, _, _, userInfo in
+      guard let brightness = (userInfo as NSDictionary?)?["value"] as? Float else { return }
+      let `self` = Unmanaged<Network>.fromOpaque(observer!).takeUnretainedValue()
+
+      self.send(.brightness(brightness), to: Array(self.devices.values))
+      print(brightness)
+    }
 #endif
   }
   
@@ -121,7 +136,7 @@ class Network: NSObject, MCSessionDelegate, MCNearbyServiceBrowserDelegate, MCNe
     print((#function, error))
   }
   
-  @MainActor func browser(_ browser: MCNearbyServiceBrowser, foundPeer peerID: MCPeerID, withDiscoveryInfo info: [String : String]?) {
+  @MainActor func browser(_ browser: MCNearbyServiceBrowser, foundPeer peerID: MCPeerID, withDiscoveryInfo info: [String: String]?) {
     devices[peerID] = RemoteDevice(peerID)
   }
   
@@ -170,26 +185,41 @@ class Network: NSObject, MCSessionDelegate, MCNearbyServiceBrowserDelegate, MCNe
         device.volume = Double(volume)
         device.isMuted = isMuted
         devices[peerID] = device
-        break
-        
+
+      case .brightness(let value):
+        device.brightness = value
+        devices[peerID] = device
+
 #elseif os(macOS)
       case .setVolume(let value):
         Sound.output.volume = Float(value)
-        break
+
       case .toggleMute:
         Sound.output.isMuted.toggle()
-        break
-      case .inceaseVolume:
+
+      case .increaseVolume:
         Sound.output.increaseVolume(by: 1/16)
-        break
+
       case .decreaseVolume:
         Sound.output.decreaseVolume(by: 1/16)
-        break
+
+      case .setBrightness(let value):
+        DisplayServicesSetBrightness(CGMainDisplayID(), value)
+
+      case .increaseBrightness:
+        var brightness: Float = 0
+        DisplayServicesGetBrightness(CGMainDisplayID(), &brightness)
+        DisplayServicesSetBrightness(CGMainDisplayID(), brightness + 1/16)
+
+      case .decreaseBrightness:
+        var brightness: Float = 0
+        DisplayServicesGetBrightness(CGMainDisplayID(), &brightness)
+        DisplayServicesSetBrightness(CGMainDisplayID(), brightness - 1/16)
+
 #endif
-        
+
       default:
         print("unhandled command \(command)")
-        break
       }
     } catch {
       print(error)

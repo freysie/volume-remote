@@ -7,12 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B0905C029B7EBC0001BBACC /* DisplayServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B0905BF29B7EBBE001BBACC /* DisplayServices.framework */; };
+		3B0905C129B7EBC0001BBACC /* DisplayServices.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B0905BF29B7EBBE001BBACC /* DisplayServices.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3B1D1F5F28AC525F00BC2436 /* DeviceIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1D1F5E28AC525F00BC2436 /* DeviceIcon.swift */; };
 		3B1D1F6028AC525F00BC2436 /* DeviceIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1D1F5E28AC525F00BC2436 /* DeviceIcon.swift */; };
 		3B1D1F6228AC52E000BC2436 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1D1F6128AC528F00BC2436 /* Network.swift */; };
 		3B1D1F6328AC52E100BC2436 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1D1F6128AC528F00BC2436 /* Network.swift */; };
 		3B1D1F6528AC52F800BC2436 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1D1F6428AC52F700BC2436 /* SettingsView.swift */; };
 		3B1D1F6728AC531B00BC2436 /* Bezel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1D1F6628AC531B00BC2436 /* Bezel.swift */; };
+		3B1E601028D4B76C005148D8 /* volume.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 3B1E600F28D4B76A005148D8 /* volume.aiff */; };
+		3B5441E8292189FC00F48F20 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5441E7292189CB00F48F20 /* Settings.swift */; };
+		3B5441E9292189FD00F48F20 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5441E7292189CB00F48F20 /* Settings.swift */; };
+		3B5441EB29218A8000F48F20 /* NoConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5441EA29218A7400F48F20 /* NoConnection.swift */; };
+		3B5441EF29218AED00F48F20 /* NoDevices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5441EE29218AED00F48F20 /* NoDevices.swift */; };
+		3B5441F129218AF200F48F20 /* Connecting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5441F029218AF200F48F20 /* Connecting.swift */; };
 		3B5B573528AB0BEE004BB199 /* VolumeRemoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B572528AB0BE6004BB199 /* VolumeRemoteApp.swift */; };
 		3B5B573628AB0BEE004BB199 /* VolumeRemoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B572528AB0BE6004BB199 /* VolumeRemoteApp.swift */; };
 		3B5B573728AB0BEE004BB199 /* RemoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B572628AB0BE7004BB199 /* RemoteView.swift */; };
@@ -23,7 +31,23 @@
 		3B8F249A28AD2D7D00A5D237 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8F249928AD2D4A00A5D237 /* Sound.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		3B0905BB29B77F2B001BBACC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3B0905C129B7EBC0001BBACC /* DisplayServices.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		3B0905BD29B7805E001BBACC /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		3B0905BF29B7EBBE001BBACC /* DisplayServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DisplayServices.framework; path = ../../../../System/Library/PrivateFrameworks/DisplayServices.framework; sourceTree = "<group>"; };
 		3B120C9B28AD7FD200C9B056 /* Slider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Slider.png; sourceTree = "<group>"; };
 		3B120C9C28AD7FD200C9B056 /* Devices.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Devices.png; sourceTree = "<group>"; };
 		3B120C9D28AD7FD200C9B056 /* Buttons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Buttons.png; sourceTree = "<group>"; };
@@ -32,6 +56,11 @@
 		3B1D1F6128AC528F00BC2436 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		3B1D1F6428AC52F700BC2436 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		3B1D1F6628AC531B00BC2436 /* Bezel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bezel.swift; sourceTree = "<group>"; };
+		3B1E600F28D4B76A005148D8 /* volume.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = volume.aiff; sourceTree = "<group>"; };
+		3B5441E7292189CB00F48F20 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		3B5441EA29218A7400F48F20 /* NoConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoConnection.swift; sourceTree = "<group>"; };
+		3B5441EE29218AED00F48F20 /* NoDevices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDevices.swift; sourceTree = "<group>"; };
+		3B5441F029218AF200F48F20 /* Connecting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connecting.swift; sourceTree = "<group>"; };
 		3B5B572528AB0BE6004BB199 /* VolumeRemoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeRemoteApp.swift; sourceTree = "<group>"; };
 		3B5B572628AB0BE7004BB199 /* RemoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteView.swift; sourceTree = "<group>"; };
 		3B5B572728AB0BEE004BB199 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -40,7 +69,7 @@
 		3B5B573428AB0BEE004BB199 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		3B5B574728AC2108004BB199 /* DevicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesView.swift; sourceTree = "<group>"; };
 		3B8F249928AD2D4A00A5D237 /* Sound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
-		3BC697A028AD3C0100410413 /* VolumeRemote--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "VolumeRemote--iOS--Info.plist"; sourceTree = "<group>"; };
+		3BC697A028AD3C0100410413 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +85,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B5B574528AB0D73004BB199 /* ISSoundAdditions in Frameworks */,
+				3B0905C029B7EBC0001BBACC /* DisplayServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B0905BE29B7EBBB001BBACC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B0905BF29B7EBBE001BBACC /* DisplayServices.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3B120C9A28AD7FD100C9B056 /* Screenshots */ = {
 			isa = PBXGroup;
 			children = (
@@ -72,16 +110,26 @@
 			path = Screenshots;
 			sourceTree = "<group>";
 		};
+		3B5441ED29218ADB00F48F20 /* AuxillaryViews */ = {
+			isa = PBXGroup;
+			children = (
+				3B5441F029218AF200F48F20 /* Connecting.swift */,
+				3B5441EA29218A7400F48F20 /* NoConnection.swift */,
+				3B5441EE29218AED00F48F20 /* NoDevices.swift */,
+			);
+			path = AuxillaryViews;
+			sourceTree = "<group>";
+		};
 		3B5B571F28AB0BE5004BB199 = {
 			isa = PBXGroup;
 			children = (
 				3B120C9E28AD7FD500C9B056 /* README.md */,
 				3B120C9A28AD7FD100C9B056 /* Screenshots */,
-				3BC697A028AD3C0100410413 /* VolumeRemote--iOS--Info.plist */,
 				3B5B574628AC2100004BB199 /* iOS */,
 				3B5B572428AB0BE6004BB199 /* Shared */,
 				3B5B573328AB0BEE004BB199 /* macOS */,
 				3B5B572D28AB0BEE004BB199 /* Products */,
+				3B0905BE29B7EBBB001BBACC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,6 +138,7 @@
 			children = (
 				3B1D1F5E28AC525F00BC2436 /* DeviceIcon.swift */,
 				3B1D1F6128AC528F00BC2436 /* Network.swift */,
+				3B5441E7292189CB00F48F20 /* Settings.swift */,
 				3B5B572528AB0BE6004BB199 /* VolumeRemoteApp.swift */,
 				3B5B572728AB0BEE004BB199 /* Assets.xcassets */,
 			);
@@ -110,6 +159,7 @@
 			children = (
 				3B5B573428AB0BEE004BB199 /* macOS.entitlements */,
 				3B8F249928AD2D4A00A5D237 /* Sound.swift */,
+				3B0905BD29B7805E001BBACC /* BridgingHeader.h */,
 			);
 			path = macOS;
 			sourceTree = "<group>";
@@ -117,10 +167,13 @@
 		3B5B574628AC2100004BB199 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				3B1E600F28D4B76A005148D8 /* volume.aiff */,
+				3BC697A028AD3C0100410413 /* Info.plist */,
 				3B1D1F6628AC531B00BC2436 /* Bezel.swift */,
 				3B5B574728AC2108004BB199 /* DevicesView.swift */,
 				3B5B572628AB0BE7004BB199 /* RemoteView.swift */,
 				3B1D1F6428AC52F700BC2436 /* SettingsView.swift */,
+				3B5441ED29218ADB00F48F20 /* AuxillaryViews */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -152,6 +205,7 @@
 				3B5B572E28AB0BEE004BB199 /* Sources */,
 				3B5B572F28AB0BEE004BB199 /* Frameworks */,
 				3B5B573028AB0BEE004BB199 /* Resources */,
+				3B0905BB29B77F2B001BBACC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -173,7 +227,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1340;
-				LastUpgradeCheck = 1340;
+				LastUpgradeCheck = 1410;
 				TargetAttributes = {
 					3B5B572B28AB0BEE004BB199 = {
 						CreatedOnToolsVersion = 13.4.1;
@@ -211,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B5B573928AB0BEE004BB199 /* Assets.xcassets in Resources */,
+				3B1E601028D4B76C005148D8 /* volume.aiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,10 +286,14 @@
 			files = (
 				3B1D1F6528AC52F800BC2436 /* SettingsView.swift in Sources */,
 				3B1D1F6228AC52E000BC2436 /* Network.swift in Sources */,
+				3B5441EB29218A8000F48F20 /* NoConnection.swift in Sources */,
+				3B5441E8292189FC00F48F20 /* Settings.swift in Sources */,
 				3B5B574828AC2125004BB199 /* DevicesView.swift in Sources */,
 				3B5B573728AB0BEE004BB199 /* RemoteView.swift in Sources */,
+				3B5441EF29218AED00F48F20 /* NoDevices.swift in Sources */,
 				3B1D1F6728AC531B00BC2436 /* Bezel.swift in Sources */,
 				3B1D1F5F28AC525F00BC2436 /* DeviceIcon.swift in Sources */,
+				3B5441F129218AF200F48F20 /* Connecting.swift in Sources */,
 				3B5B573528AB0BEE004BB199 /* VolumeRemoteApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -247,6 +306,7 @@
 				3B5B573628AB0BEE004BB199 /* VolumeRemoteApp.swift in Sources */,
 				3B1D1F6328AC52E100BC2436 /* Network.swift in Sources */,
 				3B8F249A28AD2D7D00A5D237 /* Sound.swift in Sources */,
+				3B5441E9292189FD00F48F20 /* Settings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +346,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -345,6 +406,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -374,7 +436,7 @@
 				DEVELOPMENT_TEAM = X2LBZ44QGD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "VolumeRemote--iOS--Info.plist";
+				INFOPLIST_FILE = iOS/Info.plist;
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Volume Remote uses the local network to control volume across devices.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -406,7 +468,7 @@
 				DEVELOPMENT_TEAM = X2LBZ44QGD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "VolumeRemote--iOS--Info.plist";
+				INFOPLIST_FILE = iOS/Info.plist;
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Volume Remote uses the local network to control volume across devices.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -439,6 +501,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -455,7 +518,12 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = macOS/BridgingHeader.h;
 				SWIFT_VERSION = 5.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
 			};
 			name = Debug;
 		};
@@ -469,6 +537,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -485,7 +554,12 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = macOS/BridgingHeader.h;
 				SWIFT_VERSION = 5.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
 			};
 			name = Release;
 		};
