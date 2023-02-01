@@ -13,12 +13,18 @@
 		3B1D1F6328AC52E100BC2436 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1D1F6128AC528F00BC2436 /* Network.swift */; };
 		3B1D1F6528AC52F800BC2436 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1D1F6428AC52F700BC2436 /* SettingsView.swift */; };
 		3B1D1F6728AC531B00BC2436 /* Bezel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1D1F6628AC531B00BC2436 /* Bezel.swift */; };
+		3B1E601028D4B76C005148D8 /* volume.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 3B1E600F28D4B76A005148D8 /* volume.aiff */; };
+		3B4436C02A115DBD00C790AC /* ISSoundAdditions in Frameworks */ = {isa = PBXBuildFile; productRef = 3B4436BF2A115DBD00C790AC /* ISSoundAdditions */; };
+		3B5441E8292189FC00F48F20 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5441E7292189CB00F48F20 /* Settings.swift */; };
+		3B5441E9292189FD00F48F20 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5441E7292189CB00F48F20 /* Settings.swift */; };
+		3B5441EB29218A8000F48F20 /* NoConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5441EA29218A7400F48F20 /* NoConnection.swift */; };
+		3B5441EF29218AED00F48F20 /* NoDevices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5441EE29218AED00F48F20 /* NoDevices.swift */; };
+		3B5441F129218AF200F48F20 /* Connecting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5441F029218AF200F48F20 /* Connecting.swift */; };
 		3B5B573528AB0BEE004BB199 /* VolumeRemoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B572528AB0BE6004BB199 /* VolumeRemoteApp.swift */; };
 		3B5B573628AB0BEE004BB199 /* VolumeRemoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B572528AB0BE6004BB199 /* VolumeRemoteApp.swift */; };
 		3B5B573728AB0BEE004BB199 /* RemoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B572628AB0BE7004BB199 /* RemoteView.swift */; };
 		3B5B573928AB0BEE004BB199 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B5B572728AB0BEE004BB199 /* Assets.xcassets */; };
 		3B5B573A28AB0BEE004BB199 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B5B572728AB0BEE004BB199 /* Assets.xcassets */; };
-		3B5B574528AB0D73004BB199 /* ISSoundAdditions in Frameworks */ = {isa = PBXBuildFile; productRef = 3B5B574428AB0D73004BB199 /* ISSoundAdditions */; };
 		3B5B574828AC2125004BB199 /* DevicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B574728AC2108004BB199 /* DevicesView.swift */; };
 		3B8F249A28AD2D7D00A5D237 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8F249928AD2D4A00A5D237 /* Sound.swift */; };
 /* End PBXBuildFile section */
@@ -32,6 +38,11 @@
 		3B1D1F6128AC528F00BC2436 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		3B1D1F6428AC52F700BC2436 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		3B1D1F6628AC531B00BC2436 /* Bezel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bezel.swift; sourceTree = "<group>"; };
+		3B1E600F28D4B76A005148D8 /* volume.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = volume.aiff; sourceTree = "<group>"; };
+		3B5441E7292189CB00F48F20 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		3B5441EA29218A7400F48F20 /* NoConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoConnection.swift; sourceTree = "<group>"; };
+		3B5441EE29218AED00F48F20 /* NoDevices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDevices.swift; sourceTree = "<group>"; };
+		3B5441F029218AF200F48F20 /* Connecting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connecting.swift; sourceTree = "<group>"; };
 		3B5B572528AB0BE6004BB199 /* VolumeRemoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeRemoteApp.swift; sourceTree = "<group>"; };
 		3B5B572628AB0BE7004BB199 /* RemoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteView.swift; sourceTree = "<group>"; };
 		3B5B572728AB0BEE004BB199 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -40,7 +51,7 @@
 		3B5B573428AB0BEE004BB199 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		3B5B574728AC2108004BB199 /* DevicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesView.swift; sourceTree = "<group>"; };
 		3B8F249928AD2D4A00A5D237 /* Sound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
-		3BC697A028AD3C0100410413 /* VolumeRemote--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "VolumeRemote--iOS--Info.plist"; sourceTree = "<group>"; };
+		3BC697A028AD3C0100410413 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B5B574528AB0D73004BB199 /* ISSoundAdditions in Frameworks */,
+				3B4436C02A115DBD00C790AC /* ISSoundAdditions in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +83,21 @@
 			path = Screenshots;
 			sourceTree = "<group>";
 		};
+		3B5441ED29218ADB00F48F20 /* AuxillaryViews */ = {
+			isa = PBXGroup;
+			children = (
+				3B5441F029218AF200F48F20 /* Connecting.swift */,
+				3B5441EA29218A7400F48F20 /* NoConnection.swift */,
+				3B5441EE29218AED00F48F20 /* NoDevices.swift */,
+			);
+			path = AuxillaryViews;
+			sourceTree = "<group>";
+		};
 		3B5B571F28AB0BE5004BB199 = {
 			isa = PBXGroup;
 			children = (
 				3B120C9E28AD7FD500C9B056 /* README.md */,
 				3B120C9A28AD7FD100C9B056 /* Screenshots */,
-				3BC697A028AD3C0100410413 /* VolumeRemote--iOS--Info.plist */,
 				3B5B574628AC2100004BB199 /* iOS */,
 				3B5B572428AB0BE6004BB199 /* Shared */,
 				3B5B573328AB0BEE004BB199 /* macOS */,
@@ -90,6 +110,7 @@
 			children = (
 				3B1D1F5E28AC525F00BC2436 /* DeviceIcon.swift */,
 				3B1D1F6128AC528F00BC2436 /* Network.swift */,
+				3B5441E7292189CB00F48F20 /* Settings.swift */,
 				3B5B572528AB0BE6004BB199 /* VolumeRemoteApp.swift */,
 				3B5B572728AB0BEE004BB199 /* Assets.xcassets */,
 			);
@@ -117,10 +138,13 @@
 		3B5B574628AC2100004BB199 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				3B1E600F28D4B76A005148D8 /* volume.aiff */,
+				3BC697A028AD3C0100410413 /* Info.plist */,
 				3B1D1F6628AC531B00BC2436 /* Bezel.swift */,
 				3B5B574728AC2108004BB199 /* DevicesView.swift */,
 				3B5B572628AB0BE7004BB199 /* RemoteView.swift */,
 				3B1D1F6428AC52F700BC2436 /* SettingsView.swift */,
+				3B5441ED29218ADB00F48F20 /* AuxillaryViews */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -159,7 +183,7 @@
 			);
 			name = "VolumeRemote (macOS)";
 			packageProductDependencies = (
-				3B5B574428AB0D73004BB199 /* ISSoundAdditions */,
+				3B4436BF2A115DBD00C790AC /* ISSoundAdditions */,
 			);
 			productName = "VolumeRemote (macOS)";
 			productReference = 3B5B573228AB0BEE004BB199 /* Volume Remote.app */;
@@ -173,7 +197,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1340;
-				LastUpgradeCheck = 1340;
+				LastUpgradeCheck = 1410;
 				TargetAttributes = {
 					3B5B572B28AB0BEE004BB199 = {
 						CreatedOnToolsVersion = 13.4.1;
@@ -193,7 +217,7 @@
 			);
 			mainGroup = 3B5B571F28AB0BE5004BB199;
 			packageReferences = (
-				3B5B574328AB0D73004BB199 /* XCRemoteSwiftPackageReference "ISSoundAdditions" */,
+				3B4436BE2A115DBD00C790AC /* XCRemoteSwiftPackageReference "ISSoundAdditions" */,
 			);
 			productRefGroup = 3B5B572D28AB0BEE004BB199 /* Products */;
 			projectDirPath = "";
@@ -211,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B5B573928AB0BEE004BB199 /* Assets.xcassets in Resources */,
+				3B1E601028D4B76C005148D8 /* volume.aiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,10 +256,14 @@
 			files = (
 				3B1D1F6528AC52F800BC2436 /* SettingsView.swift in Sources */,
 				3B1D1F6228AC52E000BC2436 /* Network.swift in Sources */,
+				3B5441EB29218A8000F48F20 /* NoConnection.swift in Sources */,
+				3B5441E8292189FC00F48F20 /* Settings.swift in Sources */,
 				3B5B574828AC2125004BB199 /* DevicesView.swift in Sources */,
 				3B5B573728AB0BEE004BB199 /* RemoteView.swift in Sources */,
+				3B5441EF29218AED00F48F20 /* NoDevices.swift in Sources */,
 				3B1D1F6728AC531B00BC2436 /* Bezel.swift in Sources */,
 				3B1D1F5F28AC525F00BC2436 /* DeviceIcon.swift in Sources */,
+				3B5441F129218AF200F48F20 /* Connecting.swift in Sources */,
 				3B5B573528AB0BEE004BB199 /* VolumeRemoteApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -247,6 +276,7 @@
 				3B5B573628AB0BEE004BB199 /* VolumeRemoteApp.swift in Sources */,
 				3B1D1F6328AC52E100BC2436 /* Network.swift in Sources */,
 				3B8F249A28AD2D7D00A5D237 /* Sound.swift in Sources */,
+				3B5441E9292189FD00F48F20 /* Settings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +316,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -345,6 +376,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -374,7 +406,7 @@
 				DEVELOPMENT_TEAM = X2LBZ44QGD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "VolumeRemote--iOS--Info.plist";
+				INFOPLIST_FILE = iOS/Info.plist;
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Volume Remote uses the local network to control volume across devices.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -406,7 +438,7 @@
 				DEVELOPMENT_TEAM = X2LBZ44QGD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "VolumeRemote--iOS--Info.plist";
+				INFOPLIST_FILE = iOS/Info.plist;
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Volume Remote uses the local network to control volume across devices.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -439,6 +471,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -469,6 +502,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -522,20 +556,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		3B5B574328AB0D73004BB199 /* XCRemoteSwiftPackageReference "ISSoundAdditions" */ = {
+		3B4436BE2A115DBD00C790AC /* XCRemoteSwiftPackageReference "ISSoundAdditions" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/InerziaSoft/ISSoundAdditions";
+			repositoryURL = "https://github.com/freyaalminde/ISSoundAdditions.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
+				branch = main;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		3B5B574428AB0D73004BB199 /* ISSoundAdditions */ = {
+		3B4436BF2A115DBD00C790AC /* ISSoundAdditions */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3B5B574328AB0D73004BB199 /* XCRemoteSwiftPackageReference "ISSoundAdditions" */;
+			package = 3B4436BE2A115DBD00C790AC /* XCRemoteSwiftPackageReference "ISSoundAdditions" */;
 			productName = ISSoundAdditions;
 		};
 /* End XCSwiftPackageProductDependency section */

@@ -7,10 +7,6 @@ struct Bezel: View {
     VStack(alignment: .center) {
       Spacer()
       
-//      Image(systemName: "sun.max")
-//        .font(.system(size: 112))
-//        .foregroundStyle(.secondary)
-      
       Image(systemName: value > 0 ? "speaker.wave.3" : "speaker.slash")
         .font(.system(size: 88))
         .symbolVariant(.fill)
@@ -18,6 +14,7 @@ struct Bezel: View {
       
       Spacer()
       
+      // TODO: add quarters
       HStack(spacing: 1) {
         ForEach(0..<16) { i in
           // HStack(spacing: 0) {}
@@ -48,7 +45,10 @@ struct Bezel_Previews: PreviewProvider {
     Group {
       Bezel(value: 0)
         .previewDisplayName("0%")
-      
+
+      Bezel(value: (1 / 16 / 4) * 3)
+        .previewDisplayName("four quarter 16th")
+
       Bezel(value: 0.42)
         .previewDisplayName("42%")
       

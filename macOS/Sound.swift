@@ -1,6 +1,6 @@
 import AudioToolbox
 import CoreAudio
-@testable import ISSoundAdditions
+import ISSoundAdditions
 
 extension Sound.SoundOutputManager {
   // FIXME: shouldn’t call block twice

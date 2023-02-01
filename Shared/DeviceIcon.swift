@@ -3,6 +3,8 @@ import SwiftUI
 struct DeviceIcon: View {
   var disabled = false
 
+  @Environment(\.pixelLength) private var pixelLength
+
   var body: some View {
     // AngularGradient(
     //   colors: [.blue, .purple, .red, .pink],
@@ -35,7 +37,7 @@ struct DeviceIcon: View {
         Image(systemName: "speaker.wave.3.fill")
           .font(.system(size: 48).bold())
       }
-      .offset(x: 0, y: -1)
+      .offset(x: 0, y: -pixelLength)
     }
     .background {
       LinearGradient(
@@ -65,6 +67,7 @@ struct DeviceIcon: View {
     .clipped()
     .shadow(color: Color(white: 0.96), radius: 2)
     .frame(width: 118, height: 118)
+    // .drawingGroup()
   }
 }
 
@@ -72,8 +75,8 @@ struct DeviceIcon_Previews: PreviewProvider {
   static var previews: some View {
     DeviceIcon()
       .padding()
-      .previewDisplayName("Default")
       .previewLayout(.sizeThatFits)
+      .previewDisplayName("Default")
     
     DeviceIcon(disabled: true)
       .padding()

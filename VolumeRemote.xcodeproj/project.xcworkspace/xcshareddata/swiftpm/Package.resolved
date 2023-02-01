@@ -3,10 +3,10 @@
     {
       "identity" : "issoundadditions",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/InerziaSoft/ISSoundAdditions",
+      "location" : "https://github.com/freyaalminde/ISSoundAdditions.git",
       "state" : {
-        "revision" : "6c1475f9aff503ef0e6a2e54670efa2f998b15b1",
-        "version" : "2.0.0"
+        "branch" : "main",
+        "revision" : "97b66a00393c38af014556c2ba52aa4b50a30161"
       }
     }
   ],

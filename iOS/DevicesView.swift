@@ -1,15 +1,12 @@
 import SwiftUI
 import MultipeerConnectivity
-#if os(macOS)
-@testable import ISSoundAdditions
-#endif
 
 struct DevicesView: View {
   var devices = [RemoteDevice]()
   var networkIsReachable = true
   @EnvironmentObject var settings: AppSettings
   @EnvironmentObject var network: Network
-  
+
   var body: some View {
     Group {
       if !networkIsReachable {
@@ -21,7 +18,7 @@ struct DevicesView: View {
       } else {
         ScrollView {
           Spacer(minLength: 12)
-        
+
           ForEach(devices) { device in
             NavigationLink {
               if device.isConnected {
@@ -29,8 +26,9 @@ struct DevicesView: View {
                   .environmentObject(network)
                   .environmentObject(settings)
               } else {
-                ConnectingToDevice()
+                Connecting()
                   .onAppear { network.connect(device) }
+                  .navigationBarBackButtonHidden(true)
               }
             } label: {
               VStack(spacing: 10) {
