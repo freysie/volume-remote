@@ -558,7 +558,7 @@
 /* Begin XCRemoteSwiftPackageReference section */
 		3B4436BE2A115DBD00C790AC /* XCRemoteSwiftPackageReference "ISSoundAdditions" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/freyaalminde/ISSoundAdditions.git";
+			repositoryURL = "https://github.com/freysie/ISSoundAdditions.git";
 			requirement = {
 				branch = main;
 				kind = branch;
