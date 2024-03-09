@@ -3,7 +3,7 @@
     {
       "identity" : "issoundadditions",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/freyaalminde/ISSoundAdditions.git",
+      "location" : "https://github.com/freysie/ISSoundAdditions.git",
       "state" : {
         "branch" : "main",
         "revision" : "97b66a00393c38af014556c2ba52aa4b50a30161"
